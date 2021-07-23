@@ -9,7 +9,18 @@
       <div id="drawer">
         <canvas id="canvas" ></canvas>
       </div>
-      <div id="tool-bar"></div>
+      <div id="tool-bar">
+        <div id="color-picker">
+          <input type="radio" class="radio" id="radio-1" name="color" onclick="handleColorChange(this);" value="--picker-blue-color"/>
+          <label for="radio-1"></label>
+          <input type="radio" class="radio" id="radio-2" name="color" checked onclick="handleColorChange(this);" value="--picker-red-color"/>
+          <label for="radio-2"></label>
+          <input type="radio" class="radio" id="radio-3" name="color" onclick="handleColorChange(this);" value="--picker-yellow-color"/>
+          <label for="radio-3"></label>
+          <input type="radio" class="radio" id="radio-4" name="color" onclick="handleColorChange(this);" value="--picker-green-color"/>
+          <label for="radio-4"></label>
+        </div>
+      </div>
     </div>
   </body>
   <script src="./script.js"></script>

@@ -2,6 +2,10 @@
   --main-bg-color: #d8dfe0;
   --canvas-bg-color: white;
   --toolbar-bg-color: white;
+  --picker-blue-color: #4285f4;
+  --picker-red-color: #ea4335;
+  --picker-yellow-color: #fbbc05;
+  --picker-green-color: #34a853;
 }
 
 * {
@@ -34,10 +38,89 @@ body {
 }
 
 #tool-bar {
-  min-width: 400px;
   max-width: 100%;
   padding: 0.5rem;
   margin: 1rem 0 0 0;
   border-radius: 5px;
   background-color: var(--toolbar-bg-color);
+}
+
+/* Color picker */
+#color-picker {
+  display: flex;
+  align-items: center;
+}
+
+#color-picker [type="radio"] {
+  display: none;
+}
+#color-picker label {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1.6s;
+  animation-delay: 0s;
+}
+
+#color-picker label:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#color-picker label:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 0 0.8vw 0,
+    rgba(0, 0, 0, 0.239216) 0 0.8vw 0.8vw 0;
+  transition: all 0.2s;
+  transform: translateX(-50%) translateY(-50%) scale(0);
+}
+
+#color-picker label:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+}
+#color-picker .radio:checked + label:after {
+  background: transparent;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+#color-picker input:checked + label:before {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  transition: all 0.4s;
+}
+/**** BLUE ****/
+#color-picker #radio-1 + label {
+  background: var(--picker-blue-color);
+}
+/**** RED ****/
+#color-picker #radio-2 + label {
+  margin-left: 5px;
+  background: var(--picker-red-color);
+}
+/**** YELLOW ****/
+#color-picker #radio-3 + label {
+  margin-left: 5px;
+  background: var(--picker-yellow-color);
+}
+/**** GREEN ****/
+#color-picker #radio-4 + label {
+  margin-left: 5px;
+  background: var(--picker-green-color);
 }

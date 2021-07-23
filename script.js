@@ -13,6 +13,7 @@ window.addEventListener("resize", resize);
 document.addEventListener("mousemove", draw);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
+document.addEventListener("keydown", handleKeyEvent);
 
 // new position from mouse event
 function setPosition(e) {
@@ -42,3 +43,26 @@ function draw(e) {
 
   ctx.stroke(); // draw it!
 }
+
+function handleKeyEvent(event) {
+  const radios = document.querySelectorAll('input[name="color"]');
+  const pattern = /^Digit(\d+)$/g;
+  if (event.altKey && event.code.match(pattern)) {
+    const [, digit] = pattern.exec(event.code);
+    const index = +digit - 1;
+
+    if (index >= 0 && index < radios.length) {
+      const radio = radios[index];
+      radio.checked = true;
+      handleColorChange(radio);
+    }
+  }
+}
+
+function handleColorChange(radio) {
+  const docStyle = getComputedStyle(document.documentElement);
+  lineColor = docStyle.getPropertyValue(radio.value);
+}
+
+// BOOTSTRAP
+handleColorChange(document.querySelector('input[name="color"]:checked'));
