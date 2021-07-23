@@ -1,0 +1,43 @@
+:root {
+  --main-bg-color: #d8dfe0;
+  --canvas-bg-color: white;
+  --toolbar-bg-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#drawer {
+  flex: 1;
+  flex-grow: 1;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--canvas-bg-color);
+}
+
+#tool-bar {
+  min-width: 400px;
+  max-width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+  border-radius: 5px;
+  background-color: var(--toolbar-bg-color);
+}
