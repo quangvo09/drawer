@@ -6,6 +6,7 @@
   --picker-red-color: #ea4335;
   --picker-yellow-color: #fbbc05;
   --picker-green-color: #34a853;
+  --ggs: 0.8;
 }
 
 * {
@@ -38,6 +39,10 @@ body {
 }
 
 #tool-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   max-width: 100%;
   padding: 0.5rem;
   margin: 1rem 0 0 0;
@@ -123,4 +128,118 @@ body {
 #color-picker #radio-4 + label {
   margin-left: 5px;
   background: var(--picker-green-color);
+}
+
+.btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e7effb;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #dce4f1;
+}
+
+.btn-undo {
+  background-color: #e7effb;
+  margin: 0 0 0 5px;
+}
+
+.btn-undo:hover {
+  background-color: #dce4f1;
+}
+
+.btn-erase {
+  background-color: #e7effb;
+  margin: 0 0 0 5px;
+}
+
+.btn-erase:hover {
+  background-color: #dce4f1;
+}
+
+.separator {
+  position: relative;
+  height: 20px;
+  width: 1px;
+  margin: 0 5px 0 10px;
+  background-color: #ccc;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 1px;
+  height: 20px;
+  background-color: #ececec;
+}
+
+/* ICONS */
+.gg-undo {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 14px;
+  height: 14px;
+  border: 2px solid #4285f4;
+  border-left-color: transparent;
+  border-radius: 100px;
+}
+
+.gg-undo::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #4285f4;
+  border-left: 2px solid #4285f4;
+  top: -3px;
+  left: -1px;
+  transform: rotate(-68deg);
+}
+/* Erase */
+.gg-erase {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 18px;
+}
+
+.gg-erase::after,
+.gg-erase::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-erase::before {
+  width: 6px;
+  height: 14px;
+  border-bottom: 4px solid transparent;
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px #4285f4, inset 0 -2px 0 0 #4285f4;
+  left: 7px;
+  top: 2px;
+  transform: rotate(45deg);
+}
+
+.gg-erase::after {
+  background: #4285f4;
+  width: 22px;
+  height: 2px;
+  bottom: 0;
+  border-radius: 20px;
 }
