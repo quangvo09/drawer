@@ -109,31 +109,6 @@ function handleKeyEvent(event) {
   const radios = document.querySelectorAll('input[name="color"]');
   const pattern = /^Digit(\d+)$/g;
   if (event.altKey && event.code.match(pattern)) {
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
-    console.log("🚀 ~ file: script.js ~ line 100 ~ undoCrawl ~ paths", paths);
     const [, digit] = pattern.exec(event.code);
     const index = +digit - 1;
 
